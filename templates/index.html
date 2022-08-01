@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Users info</title>
+    </head>
+    <body>
+        {% for user in users %}
+            <h1>Имя: {{ user.name }}</h1>
+            <h2>Возраст: {{ user.age }}</h2>
+            <h2>Игрушки:</h2>
+                <ul>
+                    {% for toy in user.toys %}
+                    <li>
+                        <h3>{{ toy.name }}</h3>
+                        <h4>{{ toy.description }}</h4>
+                    </li>
+                    {% endfor %}
+                </ul>
+        <br>
+        {% endfor %}
+    </body>
+</html>
